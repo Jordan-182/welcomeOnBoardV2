@@ -21,6 +21,7 @@ body {
   text-align: center;
   font-weight: 700;
   margin-bottom: var(--spacing-small);
+  font-family: var(--title-font);
 }
 
 /* Header */
@@ -66,7 +67,7 @@ body {
   justify-content: center;
   gap: var(--spacing-medium);
   padding-top: var(--spacing-medium);
-  max-width: 18ch;
+  max-width: 25ch;
   margin: 0 auto;
 
   .avatar {
@@ -98,7 +99,8 @@ body {
   .title {
     font-size: 2rem;
     text-align: center;
-    line-height: 1;
+    line-height: 1.2;
+    font-family: var(--title-font);
   }
 }
 
@@ -162,6 +164,7 @@ body {
 /* About section */
 .aboutSection {
   padding-top: 0;
+  margin-bottom: var(--spacing-medium);
 
   .aboutText {
     display: flex;
@@ -186,13 +189,23 @@ body {
 
 @media screen and (min-width: 992px) {
   .subtitle {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .globalNavbar {
     flex-direction: row;
     justify-content: space-between;
     padding-right: var(--spacing-medium);
+
+    ul {
+      li {
+        transition: 0.3s ease-out;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
   }
 
   .heroSection {
@@ -213,7 +226,7 @@ body {
     }
 
     .title {
-      max-width: 10ch;
+      max-width: 8ch;
       line-height: 1.2;
       font-size: 2.5rem;
     }
@@ -223,5 +236,6 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
   }
 }
